@@ -9,10 +9,9 @@
 
 $fp_col: 12
 
-$fp_size_s:   480px
-$fp_size_m:   600px
-$fp_size_l:   768px
-$fp_size_xl:  1200px
+$fp_size_s: 768px
+$fp_size_m: 1024px
+$fp_size_l: 1200px
 
 $fp_indent: 15px
 
@@ -167,7 +166,7 @@ $fp_indent: 15px
 =wrapper($n: $fp_indent)
 	box-sizing: border-box
 	margin: 0 auto
-	max-width: $fp_size_xl
+	max-width: $fp_size_l
 	padding: 0 $n
 
 =row()
@@ -215,17 +214,8 @@ $fp_indent: 15px
 	@if $n == 0
 		display: none
 
-=size-l($n, $indent: 0)
-	@media (max-width: $s_l)
-		$var: 100% / $fp_col * $n
-		margin-left: #{$indent}
-		margin-right: #{$indent}
-		width: #{$var}
-		@if $n == 0
-			display: none
-
 =size-m($n, $indent: 0)
-	@media (max-width: $s_m)
+	@media (max-width: $fp_size_m)
 		$var: 100% / $fp_col * $n
 		margin-left: #{$indent}
 		margin-right: #{$indent}
@@ -234,7 +224,7 @@ $fp_indent: 15px
 			display: none
 
 =size-s($n, $indent: 0)
-	@media (max-width: $s_s)
+	@media (max-width: $fp_size_s)
 		$var: 100% / $fp_col * $n
 		margin-left: #{$indent}
 		margin-right: #{$indent}

@@ -8,3 +8,71 @@
  */
 
 .fp_header
+	+size(12)
+
+	background: white
+	border-bottom: 1px solid #D9DEE3
+	padding: 0 35px
+
+	&-link
+		display: inline-block
+		padding: 15px
+
+	&-logo
+		height: 34px
+		vertical-align: top
+		width: 34px
+
+	&-logo_red
+		transition: .3s
+
+	&-title
+		display: inline-block
+		color: $fp_color_2
+		font-family: $fp_Montserrat
+		font-size: 15px
+		font-weight: 600
+		line-height: 34px
+		margin-left: 15px
+
+	&-title_red
+		transition: .3s
+
+	&-link:hover
+
+		.fp_header-logo_red,
+		.fp_header-title_red
+			color: $fp_color_1
+			fill: $fp_color_1
+
+	&-nav
+		display: inline-block
+		float: right
+
+	&-nav_list
+		+clearfix()
+
+		list-style: none
+		margin: 0
+		padding: 0
+
+	&-nav_item
+		float: left
+		font-size: 15px
+
+	&-nav_link
+		color: $fp_color_2
+		display: inline-block
+		font-family: $fp_OpenSans
+		line-height: 64px
+		padding: 0 15px
+		text-decoration: none
+		text-transform: uppercase
+		transition: .3s
+
+		&:hover
+			color: $fp_color_1
+
+@media (max-width: $fp_size_s)
+	.fp_header
+		text-align: center

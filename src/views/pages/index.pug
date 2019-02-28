@@ -5,17 +5,32 @@
 //- Version: 1.0.0
 //- 
 
+//- <!DOCTYPE html>
+//- html(lang='ru')
+	
+//- 	head
+//- 		include ./../layouts/index/head.pug
+	
+//- 	body.fp
+//- 		include ./../layouts/index/header.pug
+
+//- 		main.fp_main#fp_main
+
+//- 		include ./../components/index/sidebar.pug
+
+//- 		include ./../layouts/index/footer.pug
+
 <!DOCTYPE html>
-html(lang="ru")
+html(lang='ru')
 	
 	head
-		include ./../layouts/index/head.pug
+		include ./../layouts/error/head.pug
 	
 	body.fp
-		include ./../layouts/index/header.pug
+		include ./../layouts/error/header.pug
 
-		main.fp_main#fp_main Page Index!
+		main.fp_main#fp_main
+			.fp_wrapper
+				include ./../components/error/form-error.pug
 
-		include ./../components/index/sidebar.pug
-
-		include ./../layouts/index/footer.pug
+		include ./../layouts/error/footer.pug

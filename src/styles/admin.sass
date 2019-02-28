@@ -22,10 +22,13 @@
 
 @import components/admin/buttons
 @import components/admin/sprites
+@import components/admin/headline
 @import components/admin/header
 @import components/admin/main
 @import components/admin/sidebar
 @import components/admin/footer
+@import components/admin/form-login
+@import components/admin/oauth
 
 /**
  * Vendor components
@@ -33,4 +36,19 @@
 
 // @import vendor/admin/
 
++reset()
+
 .fp
+	background: url('../img/bg/admin-login.jpg') top center no-repeat
+	background-attachment: fixed
+	background-size: cover
+	box-sizing: border-box
+	min-height: 100vh
+	padding-bottom: 65px
+	position: relative
+
+	&_wrapper
+		+wrapper()
+
+	&_row
+		+row()

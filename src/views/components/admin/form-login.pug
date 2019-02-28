@@ -1,0 +1,55 @@
+//- 
+//- Company: FoxPlan.ru
+//- Name: FoxPlan
+//- Author: Zubchenko Valentin <admin@foxplan.ru>
+//- Version: 1.0.0
+//- 
+
+section.fp_login
+	
+	aside.fp_login-banner
+		.fp_login-banner_row
+			.fp_login-banner_img
+				i.fp_login-banner_icon.fas.fa-desktop
+			.fp_login-banner_desc
+				h2.fp_login-banner_title Адаптивный дизайн
+				h3.fp_login-banner_text Дазайн адаптируется под разные размеры экрана компьютеров, планшетов и мобильных устройств
+		.fp_login-banner_row
+			.fp_login-banner_img
+				i.fp_login-banner_icon.fas.fa-fighter-jet
+			.fp_login-banner_desc
+				h2.fp_login-banner_title Реактивная система
+				h3.fp_login-banner_text Забудьте о постоянных перезагрузках страниц, вся информация подгружается налету
+		.fp_login-banner_row
+			.fp_login-banner_img
+				i.fp_login-banner_icon.fas.fa-shield-alt
+			.fp_login-banner_desc
+				h2.fp_login-banner_title Надежная защита
+				h3.fp_login-banner_text Все данные шифруются и хранятся исключительно на сервере вашего сайта
+	
+	section.fp_login-form
+		
+		form(name='form_login' action='#' autocomplete='off' method='post').fp_login-form_left
+			h2.fp_h2 Авторизация
+			h3.fp_h3 Заполните данные, чтобы войти
+			input(type='text' autocomplete='off' placeholder='Логин' required).fp_login-form_input
+			input(type='password' autocomplete='off' placeholder='Пароль' required).fp_login-form_input
+			input(type='submit' value='Войти').fp_login-form_submit
+		
+		form(name='form_request' action='#' autocomplete='off' method='post').fp_login-form_right
+			h2.fp_h2 Забыли пароль?
+			h3.fp_h3 Введите E-mail указанный при регистрации
+			input(type='email' autocomplete='off' placeholder='E-mail' required).fp_login-form_input
+			input(type='submit' value='Востановить пароль').fp_login-form_submit
+
+			.fp_auth
+				h3.fp_h3 Вы можете войти через
+				nav.fp_auth-group
+					a(href='#').fp_auth-link.fp_auth-vkontakte
+						i.fp_auth-icon.fab.fa-vk
+					a(href='#').fp_auth-link.fp_auth-facebook
+						i.fp_auth-icon.fab.fa-facebook-f
+					a(href='#').fp_auth-link.fp_auth-google
+						i.fp_auth-icon.fab.fa-google-plus-g
+					a(href='#').fp_auth-link.fp_auth-twitter
+						i.fp_auth-icon.fab.fa-twitter

@@ -9,13 +9,13 @@
 html(lang='ru')
 	
 	head
-		include ./../layouts/error/head.pug
+		include ./../../layouts/admin/head.pug
 	
 	body.fp
-		include ./../layouts/error/header.pug
+		include ./../../layouts/admin/header.pug
 
 		main.fp_main#fp_main
 			.fp_wrapper
-				include ./../components/error/500.pug
+				include ./../../components/admin/form-login.pug
 
-		include ./../layouts/error/footer.pug
+		include ./../../layouts/admin/footer.pug

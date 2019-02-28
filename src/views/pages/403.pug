@@ -6,16 +6,16 @@
 //- 
 
 <!DOCTYPE html>
-html(lang="ru")
+html(lang='ru')
 	
 	head
-		include ./../layouts/index/head.pug
+		include ./../layouts/error/head.pug
 	
 	body.fp
-		include ./../layouts/index/header.pug
+		include ./../layouts/error/header.pug
 
-		main.fp_main#fp_main Page 403!
+		main.fp_main#fp_main
+			.fp_wrapper
+				include ./../components/error/403.pug
 
-		include ./../components/index/sidebar.pug
-
-		include ./../layouts/index/footer.pug
+		include ./../layouts/error/footer.pug

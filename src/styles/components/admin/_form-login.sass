@@ -1,0 +1,144 @@
+/**
+ * 
+ * Company: FoxPlan.ru
+ * Name: FoxPlan
+ * Author: Zubchenko Valentin <admin@foxplan.ru>
+ * Version: 1.0.0
+ * 
+ */
+
+.fp_login
+	display: flex
+	margin: 50px 0
+
+	&-banner
+		+size(4, 15px)
+		+size-m(0, 0)
+
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+
+	&-banner_row
+		display: flex
+		margin-top: 20px
+
+		&:first-child
+			margin-top: 0
+
+	&-banner_img
+		margin-right: 25px
+
+	&-banner_icon
+		color: #202020
+		font-size: 20px
+		margin-top: 5px
+		min-width: 25px
+
+	&-banner_desc
+
+	&-banner_title,
+	&-banner_text
+		font-weight: 300
+		margin: 0
+
+	&-banner_title
+		color: #202020
+		font-family: $fp_Montserrat
+		font-size: 19px
+		padding-bottom: 5px
+
+	&-banner_text
+		color: #555
+		font-family: $fp_OpenSans
+		font-size: 13px
+		line-height: 2em
+
+	&-form
+		+size(8, 15px)
+		+size-m(12, 0)
+
+		background: white
+		border: 1px solid #D9DEE3
+		border-radius: 4px
+		display: flex
+		padding: 50px 0
+
+	&-form_left,
+	&-form_right
+		box-sizing: border-box
+		position: relative
+		width: 50%
+
+	&-form_left
+		border-right: 1px solid #D9DEE3
+		padding: 0 45px 0 50px
+
+		&:after
+			background: white
+			color: #D9DEE3
+			content: 'или'
+			display: inline-block
+			font-family: $fp_Montserrat
+			padding: 0 10px
+			position: absolute
+			right: -29px
+			text-transform: uppercase
+			top: calc( 50% - 10px )
+			transform: rotate( -90deg )
+
+	&-form_right
+		padding: 0 50px 0 45px
+
+	&-form_input,
+	&-form_submit
+		border-radius: 3px
+		box-sizing: border-box
+		transition: .3s
+		width: 100%
+
+	&-form_input
+		border: 1px solid #D9DEE3
+		font-family: $fp_OpenSans
+		font-size: 13px
+		margin-bottom: 10px
+		padding: 15px 30px
+
+		&:hover
+			border-color: #5F5F5F
+
+	&-form_submit
+		border: none
+		background: #FF5F5F
+		color: white
+		cursor: pointer
+		font-family: $fp_Montserrat
+		font-size: 12px
+		padding: 16px 30px
+
+		&:hover
+			background: #FC3C3C
+
+@media (max-width: $fp_size_s)
+	.fp_login
+		margin: 15px 0
+
+		&-form
+			flex-direction: column
+
+		&-form_left,
+		&-form_right
+			width: 100%
+
+		&-form_left
+			border-bottom: 1px solid #D9DEE3
+			border-right: none
+			padding-bottom: 50px
+
+			&:after
+				right: calc( 50% - 29px )
+				top: calc( 100% - 8px )
+				transform: none
+
+		&-form_right
+			padding-top: 50px
