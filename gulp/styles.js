@@ -20,18 +20,18 @@ module.exports = () => {
 			.pipe( plugin.gcmq() )
 			//.pipe( plugin.sourcemaps.write( './' ) )
 			.pipe( plugin.gulp.dest( $$.path.dist.style ) )
-			// .pipe( plugin.gulpIf( '*.css', plugin.cleanCSS({
-			// 	compatibility: 'ie8',
-			// 	level: {
-			// 		1: {
-			// 			specialComments: 0
-			// 		}
-			// 	}
-			// })))
-			// .pipe( plugin.rename({
-			// 	suffix: '.min'
-			// }))
-			// .pipe( plugin.gulp.dest( $$.path.dist.style ) )
+			.pipe( plugin.gulpIf( '*.css', plugin.cleanCSS({
+				compatibility: 'ie8',
+				level: {
+					1: {
+						specialComments: 0
+					}
+				}
+			})))
+			.pipe( plugin.rename({
+				suffix: '.min'
+			}))
+			.pipe( plugin.gulp.dest( $$.path.dist.style ) )
 			.on( 'end', plugin.browserSync.reload );
 	});
 };
